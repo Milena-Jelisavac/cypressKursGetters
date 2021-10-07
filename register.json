@@ -1,0 +1,19 @@
+{
+  "StarterAcount": "a[title='Starter']",
+  "BackToPrisingLink": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']",
+  "Email": "input[data-vv-as='email']",
+  "Password": "input['data-vv-as='password']",
+  "SeePaswordButton": "button[type='button']",
+  "NumberOfUsers": "input['data-vv-as='number of users']",
+  "IAgreeCheckBox": "span[class='vs-c-checkbox-check']",
+  "PriviceNote": "a[onclick='window.open('https://cypress-api.vivifyscrum-stage.com/privacy-notice')']",
+  "DataSubjectCOnsentForm": "a[onclick='window.open('https://cypress-api.vivifyscrum-stage.com/data-subject-consent-form?email=')']",
+  "FacebookButton": "button[class='vs-c-btn--fb']",
+  "GoogleButton": "button[class='vs-c-btn--gp']",
+  "InstagramButton": "button[class='vs-c-btn--tw']",
+  "RezgenButton": "button[class='vs-c-btn--regzen']",
+  "StartYourFreeTrail": "button[type='submit']",
+  "LoginLink": "a[href='/login']",
+  "Monthly": ".vs-c-switch-pricing-plan-list > div:nth-of-type(1) > p",
+  "Annual": ".vs-c-switch-pricing-plan-list > div:nth-of-type(2) > p"
+}

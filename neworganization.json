@@ -1,0 +1,13 @@
+{
+  "OrganizationName": "input[name='name']",
+  "CancelButton": "button[name='prev_btn']",
+  "NextButton": "button[name='next_btn']",
+  "UploadLogo": "a[class='vs-c-btn--rounded']",
+  "CancelButtonModal": "button[name='cancel-btn']",
+  "SaveButtonModal": "button[name='save-btn']",
+  "DeleteButtonModal": "button[name='delete-btn']",
+  "EditMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__header>span[title='Edit Organization']",
+  "ArchiveOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__header>span[title='Archive Organization']",
+  "AddProjectsInMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__body>ul.vs-c-my-organization__projects>li",
+  "AddBoardsInMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__body>ul.vs-c-my-organization__boards>li[title='Add new Board']"
+}
