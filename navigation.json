@@ -1,0 +1,5 @@
+{
+  "Search": "div[class='vs-c-project-search']",
+  "Notification": "div[class='el-tooltip button']",
+  "HowItWorks": "div.vs-l-project__options >button"
+}

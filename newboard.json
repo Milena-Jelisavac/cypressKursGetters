@@ -1,0 +1,15 @@
+{
+  "OrganizationName": "input[class='el-input__inner']",
+  "SelectOrganizationFromDropDown": ".el-scrollbar__view>li:first-of-type",
+  "BoardTitle": "input[name='name']",
+  "Cancel": "button[name='prev_btn']",
+  "Next": "button[name='next_btn']",
+  "ScrumRadioButton": "span[name='type_scrum']",
+  "KanbanRadioButton": "span[name='type_kanban']",
+  "Configuration": "form.el-form>div>div:first-of-type>div.vs-input-border>div",
+  "TeamMembersFrom": "form.el-form>div>div:last-of-type>div.vs-input-border>div",
+  "UploadBoardLogo": "div[class='el-upload-dragger']",
+  "CancelButtonModal": "button[name='cancel-btn']",
+  "SaveButtonModal": "button[name='save-btn']",
+  "DeleteButtonModal": "button[name='delete-btn']"
+}
