@@ -1,0 +1,40 @@
+{
+  "user": {
+    "email": "milena.jelisavac@vivifyideas.com",
+    "password": "Test1234"
+  },
+  "registration": {
+    "email": "testcypreskurs35@gmail.com",
+    "password": "Test1234",
+    "numberOfUser": 5,
+    "firstName": "Test",
+    "lastName": "Testeric",
+    "companyName": "Test company",
+    "organizationName": "Test organization"
+  },
+  "negativData": {
+    "emailWithoutBottomPart": "test@",
+    "emailWithout": "testtest.com",
+    "emailWithoutFirstPart": "@test.com",
+    "emailWithoutDot": "test@testcom",
+    "emailWithoutCom": "test@test.",
+    "wrongEmail": "jelisavacmilena@gmail.com",
+    "wrongPass": "Test12345",
+    "shortPassword": "a",
+    "minNumberOfUser": 0,
+    "maxNumberOfUser": 11,
+    "string256characters": "MWy5BRygDKLFyL8fWBWrURge9LcHaDh40azZdThzmFyVTItRi1SI5a4EyxvwQAO0JDX7Y3C31E75jasS49SrhjfVb9c9O3hKPz3brKKa5Bf13Wd52wD3YUclcnDBOPIwuD12eK2w8QdHwLzOiTZJwFRlNpfauGgLXiLFHkcjbyut9Aq7XGIuxcPIjMbX88J7mG4wFgM5XPe8ToARnA8uObn5Z1FdNbkhRYtkkGOy5DYEz9YfdXzXpIkkR87JWMsq",
+    "nameAllSpace": "   "
+  },
+  "organization": {
+    "name": "Test",
+    "newName": "Novi test",
+    "projectName": "Test project"
+  },
+  "board": {
+    "title": "Test board",
+    "memberEmail": "member@gmail.com",
+    "newTitle": "New test board",
+    "newCode": "AAAA"
+  }
+}
