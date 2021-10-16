@@ -1,0 +1,23 @@
+{
+  "OrganizationName": "input[class='el-input__inner']",
+  "SelectOrganizationFromDropDown": ".el-scrollbar__view>li:first-of-type",
+  "BoardTitle": "input[name='name']",
+  "Cancel": "button[name='prev_btn']",
+  "Next": "button[name='next_btn']",
+  "ScrumRadioButton": "span[name='type_scrum']",
+  "KanbanRadioButton": "span[name='type_kanban']",
+  "Configuration": "form.el-form>div>div:first-of-type>div.vs-input-border>div",
+  "TeamMembersFrom": "form.el-form>div>div:last-of-type>div.vs-input-border>div",
+  "UploadBoardLogo": "div[class='el-upload-dragger']",
+  "CancelButtonModal": "button[name='cancel-btn']",
+  "SaveButtonModal": "button[name='save-btn']",
+  "DeleteButtonModal": "button[name='delete-btn']",
+  "ModalBoards": ".vs-c-modal--features-button > .vs-c-btn",
+  "AddMember": ":nth-child(1) > .vs-c-boards-item__header>.vs-c-boards-item__actions span",
+  "MemberEmail": "input[type='text']",
+  "ArhiveBoard": ".vs-c-btn.vs-c-btn--spaced.vs-c-btn--success > span:nth-of-type(2)",
+  "FirstBoard": "div:nth-of-type(1) > .vs-c-boards-item__content > .vs-c-boards-item__active-sprints",
+  "UpdateButtonConfiguration": "button[type='submit']",
+  "Code": "input[name='code']",
+  "DeleteBoard": ".vs-c-organization-boards__item.vs-c-organization-boards__item--archived > .vs-c-boards-item__header > .vs-c-boards-item__actions.vs-u-display--flex > div:nth-of-type(1)"
+}

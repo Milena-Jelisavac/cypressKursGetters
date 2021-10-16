@@ -1,0 +1,7 @@
+{
+  "Search": "div[class='vs-c-project-search']",
+  "Notification": "div[class='el-tooltip button']",
+  "HowItWorks": "div.vs-l-project__options >button",
+  "LogoutButton": ".vs-c-btn--danger",
+  "Organization": ".vs-l-organization__title.vs-u-cursor--default > .vs-c-img--avatar.vs-u-cursor--pointer"
+}

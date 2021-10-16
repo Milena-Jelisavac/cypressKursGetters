@@ -1,0 +1,5 @@
+{
+"board":{
+"configureBard":"li:nth-of-type(10) > span > div > .vs-c-site-logo"
+}
+}

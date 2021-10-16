@@ -4,10 +4,20 @@
   "NextButton": "button[name='next_btn']",
   "UploadLogo": "a[class='vs-c-btn--rounded']",
   "CancelButtonModal": "button[name='cancel-btn']",
+  "Modal": "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--lg vs-u-font-sm vs-c-modal--features-confirm-button']",
   "SaveButtonModal": "button[name='save-btn']",
   "DeleteButtonModal": "button[name='delete-btn']",
   "EditMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__header>span[title='Edit Organization']",
+  "EditOrganizationName": "input[name='change-organization-name']",
+  "SaveChange": ".el-icon-check",
+  "XeditOrganization": ".el-icon-close",
   "ArchiveOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__header>span[title='Archive Organization']",
+  "ModalConfirmYourActionNo": "button[name='cancel-btn']",
+  "ModalConfirmYourActionYes": "button[name='save-btn']",
   "AddProjectsInMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__body>ul.vs-c-my-organization__projects>li",
-  "AddBoardsInMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__body>ul.vs-c-my-organization__boards>li[title='Add new Board']"
+  "ProjectName": "input[name='name']",
+  "AddBoardsInMyOrganization": "div.vs-c-my-organizations-item-wrapper>div:first-child>div.vs-c-my-organization__content>div>div.vs-c-media__body>div.vs-c-my-organization__body>ul.vs-c-my-organization__boards>li[title='Add new Board']",
+  "DeleteOrganization": "span[title='Delete Organization']",
+  "DeleteButtonSingleOrganization": ".vs-c-btn--warning",
+  "EnterPasswordToConfrmDelete": ".el-input__inner"
 }
