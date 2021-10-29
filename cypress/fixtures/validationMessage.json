@@ -1,0 +1,15 @@
+{
+    "login":{
+        "validEmail":"The email field must be a valid email",
+        "wrongCredentials":"Oops! Your email/password combination is incorrect",
+        "requiredPass":"The password field is required"
+    },
+    "register":{
+        "invalidEmail":"The email field must be a valid email",
+        "passwordRequired":"The password field is required",
+        "numberOfUserRequired":"The number of users field is required",
+        "shortPassword":"The password field must be at least 5 characters",
+        "numberOfUserLimit":"The number of users must be between 1 and 10",
+        "existingUser":"User with this email already has an account."
+    }
+}

@@ -1,11 +1,11 @@
 {
-  "CollapseSidebar": ".vs-l-project__header > .vs-c-site-logo > .vs-c-site-sign",
-  "AllOrganization": ".vs-l-project__header > .vs-c-site-logo",
-  "AddNew": ".vs-c-list-btn--new-workspace > span",
-  "AddOrganizationMenuItem": "li:nth-of-type(1) > a > span",
-  "AddBoarMenuItem": "li:nth-of-type(2) > a > span",
-  "ImportBoardFromMenuItem": "li:nth-of-type(3) > a > span",
-  "AddNewBoard": " .vs-c-list-btn--add-new>span:first-of-type",
-  "Account": ".el-dropdown-link",
-  "User": "a[href='/account/settings']"
+  "collapseSidebar": ".vs-l-project__header > .vs-c-site-logo > .vs-c-site-sign",
+  "allOrganization": ".vs-l-project__header > .vs-c-site-logo",
+  "addNew": ".vs-c-list-btn--new-workspace > span",
+  "addOrganizationMenuItem": "li:nth-of-type(1) > a > span",
+  "addBoarMenuItem": "li:nth-of-type(2) > a > span",
+  "importBoardFromMenuItem": "li:nth-of-type(3) > a > span",
+  "addNewBoard": " .vs-c-list-btn--add-new>span:first-of-type",
+  "account": ".el-dropdown-link",
+  "user": "a[href='/account/settings']"
 }
