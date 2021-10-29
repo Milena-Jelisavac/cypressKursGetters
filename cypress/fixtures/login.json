@@ -1,12 +1,13 @@
 {
-  "Email": "input[type='email']",
-  "Password": "input[type='password']",
-  "ForgotPassword": "a[href='/forgot-password']",
-  "ButtonLogin": "button[type='submit']",
-  "BackToHomeLInk": "a[href='https://cypress-api.vivifyscrum-stage.com/']",
-  "FacebookButton": "button[class='vs-c-btn--fb']",
-  "GoogleButton": "button[class='vs-c-btn--gp']",
-  "InstagramButton": "button[class='vs-c-btn--tw']",
-  "RezgenButton": "button[class='vs-c-btn--regzen']",
-  "SingUpLink": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']"
+  "email": "input[type='email']",
+  "password": "input[type='password']",
+  "forgotPassword": "a[href='/forgot-password']",
+  "buttonLogin": "button[type='submit']",
+  "backToHomeLInk": "a[href='https://cypress-api.vivifyscrum-stage.com/']",
+  "facebookButton": "button[class='vs-c-btn--fb']",
+  "googleButton": "button[class='vs-c-btn--gp']",
+  "instagramButton": "button[class='vs-c-btn--tw']",
+  "rezgenButton": "button[class='vs-c-btn--regzen']",
+  "singUpLink": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']",
+  "errorMessage":".vs-c-form-item__error-wrapper"
 }

@@ -1,7 +1,10 @@
 {
-  "Search": "div[class='vs-c-project-search']",
-  "Notification": "div[class='el-tooltip button']",
-  "HowItWorks": "div.vs-l-project__options >button",
-  "LogoutButton": ".vs-c-btn--danger",
-  "Organization": ".vs-l-organization__title.vs-u-cursor--default > .vs-c-img--avatar.vs-u-cursor--pointer"
+  "search": "div[class='vs-c-project-search']",
+  "notification": "div[class='el-tooltip button']",
+  "howItWorks": "div.vs-l-project__options >button",
+  "logoutButton": ".vs-c-btn--danger",
+  "organization": ".vs-l-organization__title.vs-u-cursor--default > .vs-c-img--avatar.vs-u-cursor--pointer",
+  "sign":".vs-l-project__header > .vs-c-site-logo > .vs-c-site-sign",
+  "getBoard":"li[title='Test board']",
+  "getOrganization":"li[title='Test']"
 }

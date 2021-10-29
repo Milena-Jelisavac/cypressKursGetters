@@ -1,0 +1,6 @@
+{
+    "apiEndpoints": {
+        "login": "https://cypress-api.vivifyscrum-stage.com/api/v2/login",
+        "register":"https://cypress-api.vivifyscrum-stage.com/api/v2/register"
+    }
+}
