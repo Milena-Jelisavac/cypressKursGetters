@@ -22,59 +22,59 @@ describe("New spec", () => {
     cy.get(loginPage.password).clear().type(data.user.password);
     cy.get(loginPage.buttonLogin).click();
   })
-  // it("Create organization", () => {
-  //   cy.wait('@login')
-  //   cy.get(sidebar.addNew).click();
-  //   cy.get(sidebar.addOrganizationMenuItem).click();
-  //   cy.get(organization.organizationName).type(data.organization.name);
-  //   cy.get(organization.nextButton).click();
-  //   cy.get(organization.nextButton).click();
-  //   cy.get(organization.modal).click();
-  //   cy.wait('@createOrganization').then(({response, request})=>{
-  //     expect(response.statusCode).to.eq(200)
-  //     expect(response.body.name).to.eq(data.organization.name)
-  //   })
-  // });
+  it("Create organization", () => {
+    cy.wait('@login')
+    cy.get(sidebar.addNew).click();
+    cy.get(sidebar.addOrganizationMenuItem).click();
+    cy.get(organization.organizationName).type(data.organization.name);
+    cy.get(organization.nextButton).click();
+    cy.get(organization.nextButton).click();
+    cy.get(organization.modal).click();
+    cy.wait('@createOrganization').then(({response, request})=>{
+      expect(response.statusCode).to.eq(200)
+      expect(response.body.name).to.eq(data.organization.name)
+    })
+  });
 
-  // it("Create board", () => {
-  //   cy.wait('@login')
-  //   cy.get(sidebar.addNew).click();
-  //   cy.get(sidebar.addBoarMenuItem).click({ force: true });
-  //   cy.get(board.boardTitle, {timeout:3000}).clear().type(data.board.title);
-  //   cy.get(organization.nextButton).click({ force: true });
-  //   cy.get(board.scrumRadioButton).click();
-  //   cy.get(organization.nextButton).click({ force: true });
-  //   cy.get(organization.nextButton).click({ force: true });
-  //   cy.get(organization.nextButton).click({ force: true });
-  //   cy.wait('@createBoard').then(({response, request})=>{ 
-  //     expect(response.statusCode).to.eq(201)
-  //     expect(response.body.name).to.eq(data.board.title)
-  //     expect(response.statusMessage).to.eq("Created")
-  //   })
-  // });
-  // it("Edit board-Add member", () => {
-  //   cy.wait('@login')
-  //   cy.get(navigation.sign).click()
-  //   cy.get(organization.organizationContent).eq(0).should("be.visible").click();
-  //   cy.get(board.modalBoards).click({ force: true });
-  //   cy.get(board.addMember).click({ force: true });
-  //   cy.get(board.memberEmail).type(data.board.memberEmail);
-  //   cy.get(board.saveButtonModal).click();
-  //   cy.wait("@addUser").then(({response})=>{
-  //     expect(response.body.recipient_email).to.eq(data.board.memberEmail)
-  //     expect(response.statusCode).to.eq(201)
-  //     expect(response.statusMessage).to.eq("Created")
-  //   })
-  // });
-  // it("Edit board-add member and cancel", () => {
-  //   cy.wait('@login')
-  //   cy.get(navigation.sign).click()
-  //   cy.get(organization.organizationContent).eq(0).should("be.visible").click();
-  //   cy.get(board.modalBoards).click({ force: true });
-  //   cy.get(board.addMember).click({ force: true });
-  //   cy.get(board.memberEmail).type(data.board.memberEmail);
-  //   cy.get(board.cancelButtonModal).click();
-  // });
+  it("Create board", () => {
+    cy.wait('@login')
+    cy.get(sidebar.addNew).click();
+    cy.get(sidebar.addBoarMenuItem).click({ force: true });
+    cy.get(board.boardTitle, {timeout:3000}).clear().type(data.board.title);
+    cy.get(organization.nextButton).click({ force: true });
+    cy.get(board.scrumRadioButton).click();
+    cy.get(organization.nextButton).click({ force: true });
+    cy.get(organization.nextButton).click({ force: true });
+    cy.get(organization.nextButton).click({ force: true });
+    cy.wait('@createBoard').then(({response, request})=>{ 
+      expect(response.statusCode).to.eq(201)
+      expect(response.body.name).to.eq(data.board.title)
+      expect(response.statusMessage).to.eq("Created")
+    })
+  });
+  it("Edit board-Add member", () => {
+    cy.wait('@login')
+    cy.get(navigation.sign).click()
+    cy.get(organization.organizationContent).eq(0).should("be.visible").click();
+    cy.get(board.modalBoards).click({ force: true });
+    cy.get(board.addMember).click({ force: true });
+    cy.get(board.memberEmail).type(data.board.memberEmail);
+    cy.get(board.saveButtonModal).click();
+    cy.wait("@addUser").then(({response})=>{
+      expect(response.body.recipient_email).to.eq(data.board.memberEmail)
+      expect(response.statusCode).to.eq(201)
+      expect(response.statusMessage).to.eq("Created")
+    })
+  });
+  it("Edit board-add member and cancel", () => {
+    cy.wait('@login')
+    cy.get(navigation.sign).click()
+    cy.get(organization.organizationContent).eq(0).should("be.visible").click();
+    cy.get(board.modalBoards).click({ force: true });
+    cy.get(board.addMember).click({ force: true });
+    cy.get(board.memberEmail).type(data.board.memberEmail);
+    cy.get(board.cancelButtonModal).click();
+  });
    it("Edit board title - empty ", () => {
     cy.wait('@login')
     cy.get(navigation.getBoard).eq(0).should("be.visible").click();
@@ -157,15 +157,15 @@ describe("New spec", () => {
     cy.get(board.deleteBoard).click({ force: true });
     cy.get(board.saveButtonModal).click();
   });
-  // it("Arhive organization", () => {
-  //   cy.get(sidebar.AllOrganization).click({ force: true });
-  //   cy.get(organization.ArchiveOrganization).click({ force: true });
-  //   cy.get(organization.ModalConfirmYourActionYes).click({ force: true });
-  // });
-  // it("Delete organization", () => {
-  //   cy.get(board.ModalBoards).click({ force: true });
-  //   cy.get(organization.DeleteButtonSingleOrganization).click({ force: true });
-  //   cy.get(organization.EnterPasswordToConfrmDelete).type(data.user.password);
-  //   cy.get(organization.SaveButtonModal).click();
-  // });
+  it("Arhive organization", () => {
+    cy.get(sidebar.AllOrganization).click({ force: true });
+    cy.get(organization.ArchiveOrganization).click({ force: true });
+    cy.get(organization.ModalConfirmYourActionYes).click({ force: true });
+  });
+  it("Delete organization", () => {
+    cy.get(board.ModalBoards).click({ force: true });
+    cy.get(organization.DeleteButtonSingleOrganization).click({ force: true });
+    cy.get(organization.EnterPasswordToConfrmDelete).type(data.user.password);
+    cy.get(organization.SaveButtonModal).click();
+  });
 });
