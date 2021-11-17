@@ -5,6 +5,7 @@
         "requiredPass":"The password field is required"
     },
     "register":{
+        "allRequiredFields":"The email field must be a valid emailThe password field is requiredThe number of users field is required",
         "invalidEmail":"The email field must be a valid email",
         "passwordRequired":"The password field is required",
         "numberOfUserRequired":"The number of users field is required",
