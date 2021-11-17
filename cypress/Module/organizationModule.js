@@ -68,57 +68,56 @@ module.exports={
         return cy.get(".vs-c-my-organization__content")
     },
 
-create(name){
-    if(name==""){
-        sidbarModule.addNew.click()
-        sidbarModule.addOrganizationMenuItem.click()
-        this.nextButton.click()
-        this.nextButton.click()
-        this.modal.click()
-    } else {
-        sidbarModule.addNew.click()
-        sidbarModule.addOrganizationMenuItem.click()
-        this.organizationName.should('be.visible').type('Test')
-        this.nextButton.click()
-        this.nextButton.click()
-        this.modal.click()
-    }
-},
-arhive(){
-    sidbarModule.collapseSidebar.click({ force: true })
-    this.organizationContent.eq(0).trigger('mouseover')
-    this.archiveOrganization.click({ force: true }, {timeout:3000})
-    cy.wait(3000)
-    this.modalConfirmYourActionYes.click({ force: true }, {timeout:3000})
-},
-
-delete() {
-    this.organizationContent.eq(1).trigger('mouseover')
-    this.deleteOrganization.scrollIntoView().click({ force: true })
-    this.enterPasswordToConfrmDelete.type(data.user.password)
-    this.saveButtonModal.click()
-},
-
-edit(name=data.organization.newName) {
-    if (name=="" ) {
-    sidbarModule.collapseSidebar.click()
-    this.editMyOrganization.click()
-    this.editOrganizationName.clear()
-    this.saveChange.click()
-    } else {
-    sidbarModule.collapseSidebar.click()
-    this.editMyOrganization.click()
-    this.editOrganizationName.clear().type(name)
-    this.saveChange.click()
-        }
+    create(name){
+        if(name==""){
+            sidbarModule.addNew.click()
+            sidbarModule.addOrganizationMenuItem.click()
+        } else {
+            sidbarModule.addNew.click()
+            sidbarModule.addOrganizationMenuItem.click()
+            this.organizationName.should('be.visible').type('Test')
+            this.nextButton.click()
+            this.nextButton.click()
+            this.modal.click()
+          }
     },
-addProject (){
-    sidbarModule.collapseSidebar.click()
-    this.addProjectsInMyOrganization.click()
-    this.projectName.type(data.organization.projectName)
-    this.nextButton.click()
-    this.nextButton.click()
-},
+
+    arhive(){
+        sidbarModule.collapseSidebar.click({ force: true })
+        this.organizationContent.eq(0).trigger('mouseover')
+        this.archiveOrganization.click({ force: true }, {timeout:3000})
+        cy.wait(3000)
+        this.modalConfirmYourActionYes.click({ force: true }, {timeout:3000})
+    },
+
+    delete() {
+        this.organizationContent.eq(1).trigger('mouseover')
+        this.deleteOrganization.scrollIntoView().click({ force: true })
+        this.enterPasswordToConfrmDelete.type(data.user.password)
+        this.saveButtonModal.click()
+    },
+
+    edit(name=data.organization.newName) {
+        if (name=="" ) {
+            sidbarModule.collapseSidebar.click()
+            this.editMyOrganization.click()
+            this.editOrganizationName.clear()
+            this.saveChange.click()
+        } else {
+            sidbarModule.collapseSidebar.click()
+            this.editMyOrganization.click()
+            this.editOrganizationName.clear().type(name)
+            this.saveChange.click()
+         }
+    },
+
+    addProject (){
+        sidbarModule.collapseSidebar.click()
+        this.addProjectsInMyOrganization.click()
+        this.projectName.type(data.organization.projectName)
+        this.nextButton.click()
+        this.nextButton.click()
+    }
 
 
 }

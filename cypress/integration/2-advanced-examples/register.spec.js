@@ -12,12 +12,14 @@ describe("New spec", () => {
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
+
   before('Visit registration page', ()=>{
     cy.visit("/", { timeout: 30000 });
     cy.get(loginPage.singUpLink).click();
     cy.get(registration.monthlyStarter).click({ force: true });
     cy.get(registration.starterAcount).click({ force: true });
   })
+
   beforeEach('Clear all inpurt', ()=>{
     cy.get(registration.email).clear()
     cy.get(registration.password).clear()
@@ -26,6 +28,7 @@ describe("New spec", () => {
     cy.intercept("POST", endPoints.apiEndpoints.register).as('unsuccessfulRegistration')
     cy.intercept("POST", endPoints.apiEndpoints.register).as('successfulRegistration')
   })
+
   it('All empty fields', ()=>{
     registerModule.register({email:""})
     cy.get(registration.validationMessage).should("have.text",validationMessage.register.allRequiredFields)
@@ -35,51 +38,62 @@ describe("New spec", () => {
     registerModule.register({email:data.negativData.emailWithoutFirstPart})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.invalidEmail)
   });
+
   it("Registration with email without @", () => {
     registerModule.register({email:data.negativData.emailWithout})
     cy.get(registration.validationMessage).should("have.text",validationMessage.register.invalidEmail)
   });
+
   it("Registration with email without bottom part", () => {
     registerModule.register({email:data.negativData.emailWithoutBottomPart})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.invalidEmail)
   });
+
   it("Registration with email without com", () => {
     registerModule.register({email:data.negativData.emailWithoutCom})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.invalidEmail)
   });
+
   it("Registration with email without .", () => {
     registerModule.register({email:data.negativData.emailWithoutDot})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.invalidEmail)
   });
+
   it("Registration with a password shorter than 5 characters", () => {
     registerModule.register({password:data.negativData.shortPassword})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.shortPassword)
   });
+
   it("Registration with 0 number of user", () => {
     registerModule.register({numberOfUsers:data.negativData.minNumberOfUser})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.numberOfUserLimit)
   });
+
   it("Registration with more than allowed number of user", () => {
     registerModule.register({numberOfUsers:data.negativData.maxNumberOfUser})
     cy.get(registration.validationMessage).should("have.text", validationMessage.register.numberOfUserLimit)
   });
+
   it("Registration with email of an another user", () => {
     registerModule.register({email:data.negativData.wrongEmail})
-   cy.wait('@unsuccessfulRegistration').then(({response})=>{
+    cy.wait('@unsuccessfulRegistration').then(({response})=>{
      expect(response.statusCode).to.eq(401)
      expect(response.body.message.email[0]).to.eq(validationMessage.register.existingUser)
-   })
+    })
   });
+
   it("Regiser with unchecked I agree terms", ()=>{
     registerModule.register({iAgreeCheckBox:false})
     cy.get(registration.validationMessage).should("have.text", "The agree to terms and privacy policy field is required")
   })
+
   it("Successfully registration", () => {
     registerModule.register({})
     cy.wait('@successfulRegistration').then(({response})=>{
       expect(response.statusCode).to.eq(200)
     })
   });
+  
 });
   describe("Finish registration", ()=>{
     before('Login', ()=>{

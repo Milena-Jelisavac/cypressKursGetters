@@ -22,24 +22,23 @@ module.exports={
         return cy.get(".vs-u-text--left > .vs-c-btn")
     },
 
- register({email=data.registration.email, password=data.registration.password, numberOfUsers=data.registration.numberOfUser,
-    iAgreeCheckBox=true}){
- if(email==""||password==''||numberOfUsers==''){
-    this.startYourFreeTrail.click()
- } else if (iAgreeCheckBox==false) {
-    this.email.should('be.visible').type(email)
-    this.password.should('be.visible').type(password)
-    this.numberOfUsers.should('be.visible').type(numberOfUsers)
-    this.iAgreeCheckBox.click({ force: true })
-    this.startYourFreeTrail.click()
- } else
- {
-        this.email.should('be.visible').type(email)
-        this.password.should('be.visible').type(password)
-        this.numberOfUsers.should('be.visible').type(numberOfUsers)
-        this.startYourFreeTrail.click()
- }
-}
+    register({email=data.registration.email, password=data.registration.password, numberOfUsers=data.registration.numberOfUser,
+        iAgreeCheckBox=true}){
+            if(email==""||password==''||numberOfUsers==''){
+                this.startYourFreeTrail.click()
+            } else if (iAgreeCheckBox==false) {
+                this.email.should('be.visible').type(email)
+                this.password.should('be.visible').type(password)
+                this.numberOfUsers.should('be.visible').type(numberOfUsers)
+                this.iAgreeCheckBox.click({ force: true })
+                this.startYourFreeTrail.click()
+            } else {
+                this.email.should('be.visible').type(email)
+                this.password.should('be.visible').type(password)
+                this.numberOfUsers.should('be.visible').type(numberOfUsers)
+                this.startYourFreeTrail.click()
+            }
+    }
 }
 
    
