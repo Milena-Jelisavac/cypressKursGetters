@@ -37,10 +37,7 @@ module.exports={
         return cy.get(".vs-c-form-item__error-wrapper")
     },
 
-    login({
-        email=data.user.email,
-        password=data.user.password
-    }){
+    login({email=data.user.email, password=data.user.password}){
         if (email==""){
             this.password.should("be.visible").type(password)
             this.buttonLogin.click()
@@ -48,22 +45,22 @@ module.exports={
             this.email.should("be.visible").type(email)
             this.buttonLogin.click()
         } else {
-        cy.intercept('POST', '**/api/v2/login').as('login')
-        this.email.should("be.visible").type(email)
-        this.password.should("be.visible").type(password)
-        this.buttonLogin.click()
+            cy.intercept('POST', '**/api/v2/login').as('login')
+            this.email.should("be.visible").type(email)
+            this.password.should("be.visible").type(password)
+            this.buttonLogin.click()
         if(email==data.user.email &&  password==data.user.password){
             cy.wait('@login').then((intercept)=>{
                 expect(intercept.response.statusCode).to.eq(200)
             })
         }
-    }
+        }
+   },
    
-},
-logout (){
-    cy.intercept("POST", "**/api/v2/logout").as('logout')
-    sidbarModule.account.should('be.visible').click()
-    sidbarModule.user.should('be.visible').click()
-    navigationModule.logoutButton.should('be.visible').click()
-}
+    logout (){
+        cy.intercept("POST", "**/api/v2/logout").as('logout')
+        sidbarModule.account.should('be.visible').click()
+        sidbarModule.user.should('be.visible').click()
+        navigationModule.logoutButton.should('be.visible').click()
+    }
 }
