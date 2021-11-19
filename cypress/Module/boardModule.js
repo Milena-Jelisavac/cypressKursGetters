@@ -10,7 +10,7 @@ module.exports={
       return cy.get("span[name='type_scrum']")
   },
   get updateButtonConfiguration (){
-      return cy.get("button[type='submit']")
+      return cy.get('.vs-u-text--left > .vs-c-btn')
   },
   get configureBoard (){
       return cy.get("li:nth-of-type(10) > span > div > .vs-c-site-logo")
@@ -36,13 +36,13 @@ module.exports={
             this.configureBoard.click({ force: true })
             this.boardTitle.clear()
             this.code.clear()
-            this.updateButtonConfiguration.eq(1).click({ force: true })
+            this.updateButtonConfiguration.eq(0).click({ force: true })
         } else {
             navigationModule.getBoard.eq(0).click({ force: true })
             this.configureBoard.click()
             this.boardTitle.clear().type(title)
-            this.code.clear.type(code)
-            this.updateButtonConfiguration.eq(1).click({ force: true })
+            this.code.clear().type(code)
+            this.updateButtonConfiguration.eq(0).click({ force: true })
          }
     }
 }

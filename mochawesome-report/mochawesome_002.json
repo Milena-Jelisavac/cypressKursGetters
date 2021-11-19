@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-19T11:18:23.002Z",
+    "end": "2021-11-19T11:19:14.500Z",
+    "duration": 51498,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2eaaccbf-7a8a-4584-aae5-6728420d4625",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/3_organization.spec.js",
+      "file": "cypress/integration/2-advanced-examples/3_organization.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+          "title": "New spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Edit organization-empty field",
+              "fullTitle": "New spec Edit organization-empty field",
+              "timedOut": null,
+              "duration": 11744,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "organizationModule.edit(name = \"\");",
+              "err": {},
+              "uuid": "7d80b3b3-496e-45ef-850f-0545ba74254a",
+              "parentUUID": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit organization all space",
+              "fullTitle": "New spec Edit organization all space",
+              "timedOut": null,
+              "duration": 3530,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "organizationModule.edit(name = data.negativData.nameAllSpace);",
+              "err": {},
+              "uuid": "4e72e9a3-cdce-47ff-97f3-539aa34b4359",
+              "parentUUID": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Organization name more than 255 characters",
+              "fullTitle": "New spec Organization name more than 255 characters",
+              "timedOut": null,
+              "duration": 6980,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "organizationModule.edit(name = data.negativData.string256characters);",
+              "err": {},
+              "uuid": "36f1396d-a1be-4f64-bb86-2f4b6821d9d1",
+              "parentUUID": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Change organization name",
+              "fullTitle": "New spec Change organization name",
+              "timedOut": null,
+              "duration": 3939,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "organizationModule.edit(name = data.organization.newName);",
+              "err": {},
+              "uuid": "96bac0e5-1c0b-4e5d-b132-2d3731817deb",
+              "parentUUID": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add projects to organization",
+              "fullTitle": "New spec Add projects to organization",
+              "timedOut": null,
+              "duration": 3453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "organizationModule.addProject();",
+              "err": {},
+              "uuid": "c1b4a725-0584-446d-a578-d3ee9cf5fc6f",
+              "parentUUID": "f3a41bc3-d74b-4e5c-866c-e35884ccc045",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7d80b3b3-496e-45ef-850f-0545ba74254a",
+            "4e72e9a3-cdce-47ff-97f3-539aa34b4359",
+            "36f1396d-a1be-4f64-bb86-2f4b6821d9d1",
+            "96bac0e5-1c0b-4e5d-b132-2d3731817deb",
+            "c1b4a725-0584-446d-a578-d3ee9cf5fc6f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29646,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

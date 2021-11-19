@@ -1,6 +1,6 @@
 module.exports={
  get collapseSidebar (){
-     return cy.get(".vs-l-project__header > .vs-c-site-logo > .vs-c-site-sign")
+     return cy.get('.vs-l-project__header > .vs-c-site-logo > .vs-c-site-sign')
  },
  get allOrganization () {
      return cy.get(".vs-l-project__header > .vs-c-site-logo")

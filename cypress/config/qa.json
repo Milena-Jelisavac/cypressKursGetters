@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://cypress.vivifyscrum-stage.com/",
+    "env": {
+      "environment": "qa"
+    }
+  }
+  

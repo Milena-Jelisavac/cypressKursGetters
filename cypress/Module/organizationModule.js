@@ -92,7 +92,7 @@ module.exports={
 
     delete() {
         this.organizationContent.eq(1).trigger('mouseover')
-        this.deleteOrganization.scrollIntoView().click({ force: true })
+        this.deleteOrganization.trigger('mouseover',{ force: true }).click({ force: true })
         this.enterPasswordToConfrmDelete.type(data.user.password)
         this.saveButtonModal.click()
     },

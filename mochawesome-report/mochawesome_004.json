@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-11-19T11:20:07.881Z",
+    "end": "2021-11-19T11:20:32.875Z",
+    "duration": 24994,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b34fa531-2ff5-4a09-bca1-22be9ca046b0",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/5_custumCommands.js",
+      "file": "cypress/integration/2-advanced-examples/5_custumCommands.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9324145d-edc3-4cdf-a6ef-af66951202cb",
+          "title": "Custum commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create organization",
+              "fullTitle": "Custum commands Create organization",
+              "timedOut": null,
+              "duration": 9325,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.createOrganization('TestNovi');",
+              "err": {},
+              "uuid": "78ff4a70-5ed2-4d55-b319-155177d28b49",
+              "parentUUID": "9324145d-edc3-4cdf-a6ef-af66951202cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create borad",
+              "fullTitle": "Custum commands Create borad",
+              "timedOut": null,
+              "duration": 4896,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.createBoard();",
+              "err": {},
+              "uuid": "e12514ae-6f6d-4935-acb8-621337ec15bb",
+              "parentUUID": "9324145d-edc3-4cdf-a6ef-af66951202cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Arhive organization",
+              "fullTitle": "Custum commands Arhive organization",
+              "timedOut": null,
+              "duration": 6720,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.arhiveOrganization();",
+              "err": {},
+              "uuid": "f85dd118-c4f8-4158-851f-1a4e5c06bdc3",
+              "parentUUID": "9324145d-edc3-4cdf-a6ef-af66951202cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete organization",
+              "fullTitle": "Custum commands Delete organization",
+              "timedOut": null,
+              "duration": 3932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.deleteOrganization();",
+              "err": {
+                "message": "CypressError: `cy.scrollIntoView()` can only be used to scroll to 1 element, you tried to scroll to 3 elements.\n\nhttps://on.cypress.io/scrollintoview",
+                "estack": "CypressError: `cy.scrollIntoView()` can only be used to scroll to 1 element, you tried to scroll to 3 elements.\n\nhttps://on.cypress.io/scrollintoview\n    at Context.scrollIntoView (https://cypress.vivifyscrum-stage.com/__cypress/runner/cypress_runner.js:150409:78)\n    at Context.<anonymous> (https://cypress.vivifyscrum-stage.com/__cypress/runner/cypress_runner.js:169857:23)\nFrom Your Spec Code:\n    at Context.eval (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/support/index.js:314:60)",
+                "diff": null
+              },
+              "uuid": "c97ca3a7-f7c4-43e1-802d-2eee781a00c6",
+              "parentUUID": "9324145d-edc3-4cdf-a6ef-af66951202cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78ff4a70-5ed2-4d55-b319-155177d28b49",
+            "e12514ae-6f6d-4935-acb8-621337ec15bb",
+            "f85dd118-c4f8-4158-851f-1a4e5c06bdc3"
+          ],
+          "failures": [
+            "c97ca3a7-f7c4-43e1-802d-2eee781a00c6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24873,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

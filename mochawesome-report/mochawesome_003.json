@@ -1,0 +1,266 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-11-19T11:19:16.078Z",
+    "end": "2021-11-19T11:20:06.406Z",
+    "duration": 50328,
+    "testsRegistered": 9,
+    "passPercent": 11.11111111111111,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "5a422fb3-c520-4ada-8b38-099c8a5382e7",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/4_board.spec.js",
+      "file": "cypress/integration/2-advanced-examples/4_board.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+          "title": "New spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Edit board title - empty ",
+              "fullTitle": "New spec Edit board title - empty ",
+              "timedOut": null,
+              "duration": 13716,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  title: \"\"\n});",
+              "err": {},
+              "uuid": "747a86e5-c307-4e25-91e0-820f85e6c44e",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit board titile all space",
+              "fullTitle": "New spec Edit board titile all space",
+              "timedOut": null,
+              "duration": 12294,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  title: \"    \"\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.vs-c-list__btn  .vs-c-img--avatar.vs-c-img--board-avatar`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.vs-c-list__btn  .vs-c-img--avatar.vs-c-img--board-avatar`, but never found it.\n    at Object.get getBoard [as getBoard] (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/integration/2-advanced-examples/4_board.spec.js:311:15)\n    at Object.edit (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/integration/2-advanced-examples/4_board.spec.js:257:24)\n    at Context.eval (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/integration/2-advanced-examples/4_board.spec.js:634:17)",
+                "diff": null
+              },
+              "uuid": "e72d6c64-72f3-41f3-9e8a-8b1528e0b932",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit board titile more than 50 characters",
+              "fullTitle": "New spec Edit board titile more than 50 characters",
+              "timedOut": null,
+              "duration": 3932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  title: data.negativData.string256characters\n});",
+              "err": {
+                "message": "CypressError: `cy.trigger()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/trigger\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `New spec`",
+                "estack": "CypressError: `cy.trigger()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/trigger\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `New spec`\n    at Context.trigger (https://cypress.vivifyscrum-stage.com/__cypress/runner/cypress_runner.js:151382:78)\n    at Context.<anonymous> (https://cypress.vivifyscrum-stage.com/__cypress/runner/cypress_runner.js:169857:23)\nFrom Your Spec Code:\n    at Object.delete (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/integration/2-advanced-examples/4_board.spec.js:459:29)\n    at Context.eval (https://cypress.vivifyscrum-stage.com/__cypress/tests?p=cypress/integration/2-advanced-examples/4_board.spec.js:616:30)",
+                "diff": null
+              },
+              "uuid": "7e1ffc22-22b2-4cf4-bd13-f4d7ca3fc247",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successfully edit title",
+              "fullTitle": "New spec Successfully edit title",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  title: data.board.newTitle\n});",
+              "err": {},
+              "uuid": "31f4e44a-8fff-42df-975c-d741a7d16bf3",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit board code - empty ",
+              "fullTitle": "New spec Edit board code - empty ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  code: \"\"\n});",
+              "err": {},
+              "uuid": "9ce6da2e-ca20-44a9-944f-fb2cf8e29fe5",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit board code - all space ",
+              "fullTitle": "New spec Edit board code - all space ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  code: \"     \"\n});",
+              "err": {},
+              "uuid": "79891bd6-ff48-4731-afc5-a07e3017ac45",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit board code -  more than 4 characters",
+              "fullTitle": "New spec Edit board code -  more than 4 characters",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  code: data.negativData.string256characters\n});",
+              "err": {},
+              "uuid": "0e42a1c1-b612-449b-a8ea-4e1bbbf978fe",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Successfully edit board code",
+              "fullTitle": "New spec Successfully edit board code",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  code: data.board.newCode\n});",
+              "err": {},
+              "uuid": "65aa07d0-0d92-4cc8-b24c-4f580c26b767",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Edit with already exists code",
+              "fullTitle": "New spec Edit with already exists code",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "boardModule.create();\nboardModule.edit({\n  code: data.board.newCode\n});",
+              "err": {},
+              "uuid": "e02fbdd1-9a16-45fe-a2aa-5f89b0e081df",
+              "parentUUID": "ff5d9247-cad8-48f7-9335-c8abaf7de610",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "747a86e5-c307-4e25-91e0-820f85e6c44e"
+          ],
+          "failures": [
+            "e72d6c64-72f3-41f3-9e8a-8b1528e0b932",
+            "7e1ffc22-22b2-4cf4-bd13-f4d7ca3fc247"
+          ],
+          "pending": [],
+          "skipped": [
+            "31f4e44a-8fff-42df-975c-d741a7d16bf3",
+            "9ce6da2e-ca20-44a9-944f-fb2cf8e29fe5",
+            "79891bd6-ff48-4731-afc5-a07e3017ac45",
+            "0e42a1c1-b612-449b-a8ea-4e1bbbf978fe",
+            "65aa07d0-0d92-4cc8-b24c-4f580c26b767",
+            "e02fbdd1-9a16-45fe-a2aa-5f89b0e081df"
+          ],
+          "duration": 29942,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
