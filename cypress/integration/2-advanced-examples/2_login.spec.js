@@ -16,7 +16,7 @@ describe("Login and assertion", () => {
     cy.get(loginPage.password).clear()
   })
 
-  it.only("Login without email", () => {
+  it("Login without email", () => {
     authModule.login({email:""})
     cy.get(loginPage.errorMessage).eq(0).should('have.text', validationMessages.login.validEmail)
   });

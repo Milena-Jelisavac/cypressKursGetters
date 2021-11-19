@@ -4,7 +4,7 @@
     "password": "Test1234"
   },
   "registration": {
-    "email": "testcypreskurs64@gmail.com",
+    "email": "testcypreskurs333@gmail.com",
     "password": "Test1234",
     "numberOfUser": 5,
     "firstName": "Test",
@@ -34,6 +34,7 @@
   "board": {
     "title": "Test board",
     "memberEmail": "member@gmail.com",
+    "code":"1234",
     "newTitle": "New test board",
     "newCode": "AAAA"
   }
