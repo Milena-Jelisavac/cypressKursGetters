@@ -6,5 +6,9 @@
     "overwrite": false,
     "html": false,
     "json": true
-  }
+  
+}, 
+"env":{
+  "baseApi": "https://cypress-api.vivifyscrum-stage.com/api/v2/"
+}
 }

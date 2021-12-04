@@ -7,7 +7,7 @@ module.exports={
         return cy.request({
             failOnStatusCode:false,
             method: "GET",
-            url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${orgId}/boards-data`,
+            url: `${Cypress.env("baseApi")}organizations/${orgId}/boards-data`,
             headers: {
               Authorization: `Bearer ${token}`,
                 },
@@ -21,7 +21,7 @@ module.exports={
         return cy.request({
             failOnStatusCode:false,
             method:"POST",
-            url:"https://cypress-api.vivifyscrum-stage.com/api/v2/boards",
+            url:endpoints.apiEndpoints.board,
             body:{
                 name:name,
                 configuration_board_id: confBoardId,
@@ -46,7 +46,8 @@ module.exports={
         return cy.request({
             failOnStatusCode:false,
             method:"PUT",
-            url:`https://cypress-api.vivifyscrum-stage.com/api/v2/boards/${boardId}`,
+         
+            url:`${Cypress.env("baseApi")}boards/${boardId}`,
             body:{
                 code:code,
                 description:description,
@@ -69,7 +70,7 @@ module.exports={
         return cy.request({
             failOnStatusCode:false,
             method:"DELETE",
-            url:`https://cypress-api.vivifyscrum-stage.com/api/v2/boards/${boardId}`,
+            url:`${Cypress.env("baseApi")}boards/${boardId}`,
             headers:{
                 authorization:`Bearer ${token}`
             }

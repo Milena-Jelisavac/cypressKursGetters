@@ -32,6 +32,7 @@ describe('Board regresion', ()=>{
             testMessage:"Create board without name",
             statusCode:400
         })
+      
     })
     it("Creating board with only space", ()=>{
         boardAPI.post({
